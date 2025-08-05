@@ -27,6 +27,7 @@ export default function ServicesSection() {
     fetchServices();
   }, []);
 
+
   if (loading) {
     return (
       <section className="py-16 bg-gray-50">
@@ -68,18 +69,19 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col items-center"
             >
               {service.attributes.icon?.data && (
-                <div className="mb-4">
-                  <Image
-                    src={strapiAPI.getMediaURL(service.attributes.icon.data.attributes.url)}
-                    alt={service.attributes.icon.data.attributes.alternativeText || service.attributes.title}
-                    width={64}
-                    height={64}
-                    className="w-16 h-16 object-contain"
-                  />
-                </div>
+              <div className="mb-4 flex justify-center items-center">                 
+                <Image                   
+                  src={strapiAPI.getMediaURL(service.attributes.icon.data.attributes.url)}                   
+                  alt={service.attributes.icon.data.attributes.alternativeText || service.attributes.title}                   
+                  width={300}                   
+                  height={300}                   
+                  className="w-40 h-40 object-cover rounded-full shadow-lg"                 
+                />              
+              </div>
+             
               )}
               
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
