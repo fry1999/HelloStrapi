@@ -4,14 +4,14 @@
 
 Dự án này bao gồm:
 - **Frontend**: Next.js 15.4.4 với TypeScript và Tailwind CSS (thư mục `fontend/`)
-- **Backend**: Strapi 4.25.23 với SQLite database (thư mục `hello-strapi/`)
+- **Backend**: Strapi 4.25.23 với SQLite database (thư mục `backend/`)
 
 ## 🚀 Cách chạy dự án
 
 ### 1. Khởi động Strapi Backend
 
 ```bash
-cd hello-strapi
+cd backend
 npm run develop
 ```
 

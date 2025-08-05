@@ -35,6 +35,7 @@ export const fetchAPI = async (path: string, urlParamsObject = {}, options = {})
 
 // Specific API functions cho từng content type
 export const strapiAPI = {
+
   // Lấy hero sections
   getHeroSections: () => fetchAPI('/hero-sections', { populate: '*' }),
   
@@ -45,7 +46,7 @@ export const strapiAPI = {
   }),
   
   // Lấy company info
-  getCompanyInfo: () => fetchAPI('/company-infos', { populate: '*' }),
+  getCompanyInfo: () => fetchAPI('/company-infos/1', { populate: '*' }),
   
   // Lấy contact info
   getContactInfo: () => fetchAPI('/contact-infos', { populate: '*' }),

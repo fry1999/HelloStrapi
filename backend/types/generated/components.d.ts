@@ -3,11 +3,12 @@ import type { Attribute, Schema } from '@strapi/strapi';
 export interface FeaturesFeatures extends Schema.Component {
   collectionName: 'components_features_features';
   info: {
+    description: '';
     displayName: 'features';
   };
   attributes: {
-    featureDescription: Attribute.Text;
-    featureName: Attribute.String;
+    description: Attribute.Text;
+    title: Attribute.String;
   };
 }
 

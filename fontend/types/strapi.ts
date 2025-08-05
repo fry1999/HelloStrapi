@@ -47,6 +47,7 @@ export interface StrapiBlocks {
   children: Array<{
     type: string;
     text: string;
+    bold?: boolean;
   }>;
 }
 
@@ -150,3 +151,22 @@ export interface Partner {
     publishedAt: string;
   };
 } 
+
+export interface Home {
+  id: number;
+  attributes: {
+    title: string;
+    subtitle: string;
+    backgroundImage: {
+      data: StrapiMedia;
+    };
+    ctaButton: {
+      text: string;
+      url: string;
+    };
+    description: StrapiBlocks[];
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+  };
+}

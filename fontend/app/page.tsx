@@ -1,37 +1,33 @@
 import ServicesSection from '@/components/ServicesSection';
 import PartnersSection from '@/components/PartnersSection';
+import HeroSection from '@/components/HomeSection';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Chào mừng đến với HelloStrapi
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Dự án demo kết nối Next.js Frontend với Strapi Backend
-          </p>
+      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <div className="text-2xl font-bold">Logo</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#services"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Xem Dịch Vụ
-            </a>
-            <a
-              href="#partners"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Đối Tác
-            </a>
+            <a href="#home" className="text-white">Trang chủ</a>
+
+            <a href="#services" className="text-white">Xem Dịch Vụ</a>
+            <a href="#partners" className="text-white">Đối Tác</a>
+            <div>
+              <a href="#contact" className="bg-white text-blue-600 px-8 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Liên Hệ</a>
+            </div>
           </div>
         </div>
       </header>
 
+      {/* Hero Section */}
+      <section id="home">
+        <HeroSection />
+      </section>
+
       {/* API Status Section */}
-      <section className="py-12 bg-gray-100">
+      {/* <section className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-center mb-8">🔗 Kết nối API Status</h2>
@@ -51,7 +47,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
       <section id="services">
@@ -116,7 +112,10 @@ const imageUrl = strapiAPI.getMediaURL(
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center flex justify-between items-center">
+          <div>Logo</div>
+          <div>
+          </div>
           <p className="text-gray-400">
             © 2024 HelloStrapi - Demo Next.js + Strapi Integration
           </p>

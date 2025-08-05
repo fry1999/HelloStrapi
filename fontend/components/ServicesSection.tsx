@@ -57,10 +57,10 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Dịch Vụ Của Chúng Tôi
+            {'当社のITソリューション領域'}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Khám phá các dịch vụ chuyên nghiệp mà chúng tôi cung cấp
+            {'まずはお客様の問題を理解し、それから最適な技術ソリューションを提案し、製品を作成します。'}
           </p>
         </div>
 
@@ -85,8 +85,11 @@ export default function ServicesSection() {
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {service.attributes.title}
               </h3>
+              <p className="text-gray-600 mb-4">
+                {service.attributes.description[0].children[0].text}
+              </p>
               
-              {service.attributes.features && service.attributes.features.length > 0 && (
+              {/* {service.attributes.features && service.attributes.features.length > 0 && (
                 <ul className="space-y-2 mb-4">
                   {service.attributes.features.map((feature) => (
                     <li key={feature.id} className="text-gray-600 text-sm flex items-start">
@@ -97,7 +100,7 @@ export default function ServicesSection() {
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
             </div>
           ))}
         </div>

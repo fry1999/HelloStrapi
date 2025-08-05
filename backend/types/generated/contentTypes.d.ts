@@ -438,6 +438,7 @@ export interface ApiContactInfoContactInfo extends Schema.CollectionType {
 export interface ApiHeroSectionHeroSection extends Schema.CollectionType {
   collectionName: 'hero_sections';
   info: {
+    description: '';
     displayName: 'hero-section';
     pluralName: 'hero-sections';
     singularName: 'hero-section';
@@ -455,6 +456,7 @@ export interface ApiHeroSectionHeroSection extends Schema.CollectionType {
     > &
       Attribute.Private;
     ctaButton: Attribute.Component<'text.cta-button'>;
+    description: Attribute.Blocks;
     publishedAt: Attribute.DateTime;
     subtitle: Attribute.Text;
     title: Attribute.String;
